@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 class Job{
+    friend class LLPQ;
 private:
     int id;
     int arrivalTime;
