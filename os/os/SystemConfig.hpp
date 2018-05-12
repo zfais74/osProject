@@ -13,20 +13,20 @@
 
 class SystemConfig{
 private:
-    int startTime;
+    int arrivalTime;
     int devices;
     int availableDevices;
     int memSize;
     int availableMem;
     int time;
 public:
-    SystemConfig(int startTime, int memSize, int devices, int time);
-    int getStartTime();
+    SystemConfig(int arrivalTime, int memSize, int devices, int time);
+    int getArrivalTime();
     int getMemSize();
     int getDevices();
     int getTime();
-    void useMem(int memUsed);
-    void useDevices(int devicesUsed);
+    bool useMem(int memUsed);
+    bool useDevices(int devicesUsed);
     void freeMem(int memFreed);
     void freeDevices(int devicesFreed);
     
