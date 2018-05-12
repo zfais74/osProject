@@ -21,8 +21,8 @@ string ProjectRunner::readFile(string fileName){
     //myFile.open("test.txt");
     string line;
     if(myFile.is_open()){
-        while (!myFile.eof()){
-            myFile >> line;
+        while (getline(myFile,line)){
+            
             cout << line << endl;
         }
         myFile.close();
