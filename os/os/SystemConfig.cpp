@@ -8,7 +8,11 @@
 
 #include "SystemConfig.hpp"
 #include <iostream>
+#include <string>
 using namespace std;
+SystemConfig::SystemConfig(){
+    
+}
 SystemConfig::SystemConfig(int arrivalTime, int memSize, int devices, int time){
     this->arrivalTime = arrivalTime;
     this->devices = devices;
@@ -51,4 +55,8 @@ bool SystemConfig::useMem(int memUsed){
 
 void SystemConfig::freeMem(int memFreed){
     availableMem+=memFreed;
+}
+
+string SystemConfig::toString(){
+    return to_string(this->arrivalTime) + " " + to_string(this->availableDevices) + " " + to_string(this->availableMem);
 }

@@ -10,6 +10,8 @@
 #define SystemConfig_hpp
 
 #include <stdio.h>
+#include <string>
+using namespace std;
 
 class SystemConfig{
 private:
@@ -20,6 +22,7 @@ private:
     int availableMem;
     int time;
 public:
+    SystemConfig();
     SystemConfig(int arrivalTime, int memSize, int devices, int time);
     int getArrivalTime();
     int getMemSize();
@@ -29,7 +32,7 @@ public:
     bool useDevices(int devicesUsed);
     void freeMem(int memFreed);
     void freeDevices(int devicesFreed);
-    
+    string toString();
 };
 
 #endif /* SystemConfig_hpp */
