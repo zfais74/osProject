@@ -10,6 +10,8 @@
 #define Job_hpp
 
 #include <stdio.h>
+#include <string>
+using namespace std;
 class Job{
     friend class LLPQ;
 private:
@@ -21,7 +23,6 @@ private:
     int priority;
 public:
     Job(int arrivalTime, int id, int unitsOfMem, int maxDevices, int unitsOfTime, int priority);
-    
-    
+    string toString();
 };
 #endif /* Job_hpp */

@@ -8,6 +8,7 @@
 
 #include "projectRunner.hpp"
 #include "SystemConfig.hpp"
+#include "Job.hpp"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -24,6 +25,7 @@ string ProjectRunner::readFile(string fileName){
     ifstream myFile(fileName.c_str());
     //myFile.open("test.txt");
     string line;
+    vector<Job>jobs;
     if(myFile.is_open()){
         while (myFile >> line){
             cout << line << endl;
@@ -54,6 +56,21 @@ string ProjectRunner::readFile(string fileName){
                     //if the line is a job
                 case 'A': {
                     cout<<"job"<<endl;
+                    //read the next number
+                    myFile >> line;
+                    int arrivalTime = stoi(line);
+                    for(int properties = 0; properties < 5; properties++){
+                        myFile >> line;
+                        //separates the Letter=Number string since there's no clean way to do it in c++...
+                        stringstream lineToSeparate(line);
+                        while(getline(lineToSeparate, lineSegment, '=')){
+                            lineSeparated.push_back(lineSegment);
+                        }
+                        int value = stoi(lineSeparated[1]);
+                        commandValues.push_back(value);
+                    }
+                    Job job = Job(arrivalTime, commandValues[0], commandValues[1], commandValues[2], commandValues[3], commandValues[4]);
+                    jobs.push_back(job);
                     break;
                 }
                     //if the line is a request
@@ -80,6 +97,7 @@ string ProjectRunner::readFile(string fileName){
         }
         myFile.close();
         cout<<system.toString()<<endl;
+        cout<<jobs[2].toString()<<endl;
         return "done";
     } else {
         return "error reading file";
