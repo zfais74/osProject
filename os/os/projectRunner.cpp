@@ -14,6 +14,8 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#define COMMAND_PROPERTIES int 3;
+#define JOB_PROPERTIES int 5;
 using namespace std;
 ProjectRunner::ProjectRunner(){
     

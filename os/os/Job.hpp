@@ -13,7 +13,7 @@
 #include <string>
 using namespace std;
 class Job{
-    friend class LLPQ;
+    friend class Node;
 private:
     int id;
     int arrivalTime;

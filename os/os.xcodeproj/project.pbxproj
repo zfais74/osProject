@@ -11,6 +11,9 @@
 		B3E5ECB620A725D900895718 /* projectRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3E5ECB420A725D900895718 /* projectRunner.cpp */; };
 		B3F7185E20A778FF00662025 /* SystemConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3F7185C20A778FF00662025 /* SystemConfig.cpp */; };
 		B3F7186120A77ABE00662025 /* Job.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3F7185F20A77ABE00662025 /* Job.cpp */; };
+		B3FB222220B3826F00DD8F8D /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3FB222020B3826F00DD8F8D /* Node.cpp */; };
+		B3FB222520B383E800DD8F8D /* HoldQ1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3FB222320B383E800DD8F8D /* HoldQ1.cpp */; };
+		B3FB222820B383F500DD8F8D /* HoldQ2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3FB222620B383F500DD8F8D /* HoldQ2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +40,12 @@
 		B3F7185D20A778FF00662025 /* SystemConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SystemConfig.hpp; sourceTree = "<group>"; };
 		B3F7185F20A77ABE00662025 /* Job.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Job.cpp; sourceTree = "<group>"; };
 		B3F7186020A77ABE00662025 /* Job.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Job.hpp; sourceTree = "<group>"; };
+		B3FB222020B3826F00DD8F8D /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		B3FB222120B3826F00DD8F8D /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		B3FB222320B383E800DD8F8D /* HoldQ1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HoldQ1.cpp; sourceTree = "<group>"; };
+		B3FB222420B383E800DD8F8D /* HoldQ1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HoldQ1.hpp; sourceTree = "<group>"; };
+		B3FB222620B383F500DD8F8D /* HoldQ2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HoldQ2.cpp; sourceTree = "<group>"; };
+		B3FB222720B383F500DD8F8D /* HoldQ2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HoldQ2.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				B3F7185B20A7721300662025 /* project.pdf */,
+				B3FB222020B3826F00DD8F8D /* Node.cpp */,
+				B3FB222120B3826F00DD8F8D /* Node.hpp */,
+				B3FB222320B383E800DD8F8D /* HoldQ1.cpp */,
+				B3FB222420B383E800DD8F8D /* HoldQ1.hpp */,
+				B3FB222620B383F500DD8F8D /* HoldQ2.cpp */,
+				B3FB222720B383F500DD8F8D /* HoldQ2.hpp */,
 				B3E5ECAA20A70DD800895718 /* main.cpp */,
 				B3E5ECB720A72EB200895718 /* input.txt */,
 				B3F7185A20A76E7200662025 /* test.txt */,
@@ -143,7 +158,10 @@
 				B3E5ECAB20A70DD800895718 /* main.cpp in Sources */,
 				B3E5ECB620A725D900895718 /* projectRunner.cpp in Sources */,
 				B3F7185E20A778FF00662025 /* SystemConfig.cpp in Sources */,
+				B3FB222820B383F500DD8F8D /* HoldQ2.cpp in Sources */,
 				B3F7186120A77ABE00662025 /* Job.cpp in Sources */,
+				B3FB222520B383E800DD8F8D /* HoldQ1.cpp in Sources */,
+				B3FB222220B3826F00DD8F8D /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
