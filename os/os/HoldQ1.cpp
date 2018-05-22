@@ -13,7 +13,7 @@ HoldQ1::HoldQ1(){
     size = 0;
 }
 
-void HoldQ1::insertJob(Job *job){
+void HoldQ1::insertJob(Job job){
     if(this->size == 0){
         addFirstJob(job);
         return;
@@ -27,7 +27,7 @@ void HoldQ1::insertJob(Job *job){
     
 }
 
-void HoldQ1::addFirstJob(Job *job){
+void HoldQ1::addFirstJob(Job job){
     size++;
     Node node = Node(job);
     Node *ptr = &node;

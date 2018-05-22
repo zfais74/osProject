@@ -24,5 +24,6 @@ private:
 public:
     Job(int arrivalTime, int id, int unitsOfMem, int maxDevices, int unitsOfTime, int priority);
     string toString();
+    int getPriority();
 };
 #endif /* Job_hpp */

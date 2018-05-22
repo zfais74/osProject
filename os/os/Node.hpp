@@ -19,7 +19,7 @@ class Node{
     Job *job;
     
 public:
-    Node(Job *job);
+    Node(Job job);
     ~Node();
     Job getJob();
     int getJobPriority();

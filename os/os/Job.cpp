@@ -21,3 +21,7 @@ Job::Job(int arrivalTime, int id, int unitsOfMem, int maxDevices, int unitsOfTim
 string Job::toString(){
     return to_string(this->arrivalTime) + " " + to_string(this->id);
 }
+
+int Job::getPriority(){
+    return priority;
+}

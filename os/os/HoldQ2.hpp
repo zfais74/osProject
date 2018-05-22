@@ -18,7 +18,8 @@ class HoldQ2{
 public:
     HoldQ2();
     ~HoldQ2();
-    bool insert(Job *job);
-    Job* popJob();
+    bool insert(Job job);
+    Job popJob();
+    void print();
 };
 #endif /* HoldQ2_hpp */

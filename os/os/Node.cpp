@@ -9,10 +9,10 @@
 #include "Node.hpp"
 #include <iostream>
 using namespace std;
-Node::Node(Job *job){
+Node::Node(Job job){
     previous = NULL;
     next = NULL;
-    this->job = job;
+    this->job = &job;
 }
 
 Node::~Node(){

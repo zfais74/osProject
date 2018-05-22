@@ -9,6 +9,7 @@
 #include "projectRunner.hpp"
 #include "SystemConfig.hpp"
 #include "Job.hpp"
+#include "HoldQ2.hpp"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -26,6 +27,7 @@ string ProjectRunner::readFile(string fileName){
     cout<<fileName<<endl;
     ifstream myFile(fileName.c_str());
     //myFile.open("test.txt");
+    HoldQ2 q2 = HoldQ2();
     string line;
     vector<Job>jobs;
     if(myFile.is_open()){
@@ -51,6 +53,7 @@ string ProjectRunner::readFile(string fileName){
                     }
                         int value = stoi(lineSeparated[1]);
                         commandValues.push_back(value);
+                        lineSeparated.clear();
                     }
                     system = SystemConfig(arrivalTime, commandValues[0], commandValues[1], commandValues[2]);
                     break;
@@ -69,15 +72,26 @@ string ProjectRunner::readFile(string fileName){
                             lineSeparated.push_back(lineSegment);
                         }
                         int value = stoi(lineSeparated[1]);
+                        lineSeparated.clear();
                         commandValues.push_back(value);
                     }
                     Job job = Job(arrivalTime, commandValues[0], commandValues[1], commandValues[2], commandValues[3], commandValues[4]);
+                    if(job.getPriority() == 2){
+                        q2.insert(job);
+                    }
                     jobs.push_back(job);
                     break;
                 }
                     //if the line is a request
                 case 'Q': {
                     cout<<"request"<<endl;
+                    myFile >> line;
+                    int arrivalTime = stoi(line);
+                    cout<<arrivalTime<<endl;
+                    for(int properties = 0; properties < 2; properties++){
+                        myFile >> line;
+                        //separates the Letter=Number string since there's no clean way to do it in c++...
+                    }
                     break;
                 }
                     //if the line is a display command
@@ -100,6 +114,7 @@ string ProjectRunner::readFile(string fileName){
         myFile.close();
         cout<<system.toString()<<endl;
         cout<<jobs[2].toString()<<endl;
+        q2.print();
         return "done";
     } else {
         return "error reading file";
