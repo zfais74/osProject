@@ -10,5 +10,15 @@
 #define HoldQ2_hpp
 
 #include <stdio.h>
-
+#include "Node.hpp"
+class HoldQ2{
+    Node *head;
+    Node *tail;
+    int size;
+public:
+    HoldQ2();
+    ~HoldQ2();
+    bool insert(Job *job);
+    Job* popJob();
+};
 #endif /* HoldQ2_hpp */
