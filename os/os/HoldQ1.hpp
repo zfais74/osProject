@@ -19,8 +19,8 @@ class HoldQ1{
 public:
     HoldQ1();
     ~HoldQ1();
-    void insertJob(Job job);
-    void addFirstJob(Job job);
+    void insertJob(Job *job);
+    void addFirstJob(Job *job);
     bool popJob();
     
 };

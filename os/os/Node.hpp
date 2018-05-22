@@ -19,9 +19,9 @@ class Node{
     Job *job;
     
 public:
-    Node(Job job);
+    Node(Job *job);
     ~Node();
-    Job getJob();
+    Job* getJob();
     int getJobPriority();
 };
 #endif /* Node_hpp */

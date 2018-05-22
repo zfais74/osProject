@@ -16,27 +16,36 @@ HoldQ2::HoldQ2(){
 }
 
 HoldQ2::~HoldQ2(){
-    if(head != NULL || tail !=NULL){
-        cout<<"Warning:: Q2 is not empty!"<<endl;
-    }
+    Node *tmp = head;
+    while(head !=NULL){
+        tmp = head->next;
+        delete head;
+        head = tmp;
+        size --;
+    }//while
+    
+    head = NULL;
+    tail = NULL;
 }
 
-bool HoldQ2::insert(Job job){
+bool HoldQ2::insert(Job *job){
     //If the queue is empty
-    Node newNode = Node(job);
-    Node *newPtr = &newNode;
+    Node *newNode = new Node(job);
     if(size == 0){
         size++;
-        head = newPtr;
-        tail = newPtr;
-        cout<<"hi" + newNode.job->toString()<<endl;
+        head = newNode;
+        tail = newNode;
+        cout<<"hi" + newNode->job->toString()<<endl;
         return true;
     }
     
     try {
         //makes the new node the head and point it's next value to the previous head. It's a regular queue
-        tail->next = newPtr;
-        tail = newPtr;
+        if(size == 1){
+            head->next = newNode;
+        }
+        tail->next = newNode;
+        tail = newNode;
         tail->next = NULL;
         size++;
     } catch (const exception& e) {
@@ -47,7 +56,7 @@ bool HoldQ2::insert(Job job){
     return true;
 }
 
-Job HoldQ2::popJob(){
+Job* HoldQ2::popJob(){
     //if the queue is 0 or less return null
     if(size <= 0){
         return head->getJob();
@@ -60,7 +69,7 @@ Job HoldQ2::popJob(){
         head->previous = NULL;
         temp->next = NULL;
         tail = head->next;
-        return *job;
+        return job;
     }
 }
 
@@ -69,6 +78,7 @@ void HoldQ2::print(){
     while(traverse != NULL){
         cout<<"job pr: "<<endl;
         cout<<traverse->getJobPriority()<<endl;
+        cout<<traverse->getJob()->getId()<<endl;
         traverse = traverse->next;
     }
 }

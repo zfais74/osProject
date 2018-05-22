@@ -29,7 +29,7 @@ string ProjectRunner::readFile(string fileName){
     //myFile.open("test.txt");
     HoldQ2 q2 = HoldQ2();
     string line;
-    vector<Job>jobs;
+    vector<Job*>jobs;
     if(myFile.is_open()){
         while (myFile >> line){
             cout << line << endl;
@@ -75,8 +75,8 @@ string ProjectRunner::readFile(string fileName){
                         lineSeparated.clear();
                         commandValues.push_back(value);
                     }
-                    Job job = Job(arrivalTime, commandValues[0], commandValues[1], commandValues[2], commandValues[3], commandValues[4]);
-                    if(job.getPriority() == 2){
+                    Job *job = new Job(arrivalTime, commandValues[0], commandValues[1], commandValues[2], commandValues[3], commandValues[4]);
+                    if(job->getPriority() == 2){
                         q2.insert(job);
                     }
                     jobs.push_back(job);
@@ -113,7 +113,7 @@ string ProjectRunner::readFile(string fileName){
         }
         myFile.close();
         cout<<system.toString()<<endl;
-        cout<<jobs[2].toString()<<endl;
+        //cout<<jobs[2]->toString()<<endl;
         q2.print();
         return "done";
     } else {

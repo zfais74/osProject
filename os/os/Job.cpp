@@ -25,3 +25,7 @@ string Job::toString(){
 int Job::getPriority(){
     return priority;
 }
+
+int Job::getId(){
+    return id;
+}
