@@ -33,6 +33,8 @@ public:
     void freeMem(int memFreed);
     void freeDevices(int devicesFreed);
     string toString();
+    int getAvailableMem();
+    int getAvailableDevices();
 };
 
 #endif /* SystemConfig_hpp */

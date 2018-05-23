@@ -78,12 +78,20 @@ string ProjectRunner::readFile(string fileName){
                         commandValues.push_back(value);
                     }
                     Job *job = new Job(arrivalTime, commandValues[0], commandValues[1], commandValues[2], commandValues[3], commandValues[4]);
-                    if(job->getPriority() == 2){
+                    if(job->getPriority() == 2 && (system.getAvailableMem() > job->getUnitsOfMem() && system.getAvailableDevices() > job->getMaxDevices())){
+                        system.useMem(job->getUnitsOfMem());
+                        system.useDevices(job->getMaxDevices());
                         q2.insert(job);
+                    } else {
+                        cout<<"reject"<<endl;
                     }
-                    if(job->getPriority() == 1) {
+                    if(job->getPriority() == 1 && (system.getAvailableMem() > job->getUnitsOfMem() && system.getAvailableDevices() > job->getMaxDevices())) {
                         cout<<"push to q1"<<endl;
+                        system.useMem(job->getUnitsOfMem());
+                        system.useDevices(job->getMaxDevices());
                         q1.insertJob(job);
+                    } else {
+                        cout<<"reject q1"<<endl;
                     }
                     jobs.push_back(job);
                     break;
@@ -120,6 +128,7 @@ string ProjectRunner::readFile(string fileName){
         myFile.close();
         cout<<system.toString()<<endl;
         //cout<<jobs[2]->toString()<<endl;
+        cout<<"q2 ---------"<<endl;
         q2.print();
         cout<<"bllaha"<<endl;
         q1.printJobs();

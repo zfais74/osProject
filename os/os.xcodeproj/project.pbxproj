@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B36553C320B6260A00F21919 /* Process.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B36553C120B6260A00F21919 /* Process.cpp */; };
 		B3E5ECAB20A70DD800895718 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3E5ECAA20A70DD800895718 /* main.cpp */; };
 		B3E5ECB620A725D900895718 /* projectRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3E5ECB420A725D900895718 /* projectRunner.cpp */; };
 		B3F7185E20A778FF00662025 /* SystemConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3F7185C20A778FF00662025 /* SystemConfig.cpp */; };
@@ -29,6 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B36553BB20B6209A00F21919 /* test1_D26.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1_D26.json; sourceTree = "<group>"; };
+		B36553BC20B6209B00F21919 /* project_supplementary.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = project_supplementary.pdf; sourceTree = "<group>"; };
+		B36553BD20B6209B00F21919 /* test1_D10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1_D10.json; sourceTree = "<group>"; };
+		B36553BE20B6209B00F21919 /* test2_D11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2_D11.json; sourceTree = "<group>"; };
+		B36553BF20B6209B00F21919 /* test2_D20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2_D20.json; sourceTree = "<group>"; };
+		B36553C020B6209B00F21919 /* sample_input.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_input.json; sourceTree = "<group>"; };
+		B36553C120B6260A00F21919 /* Process.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Process.cpp; sourceTree = "<group>"; };
+		B36553C220B6260A00F21919 /* Process.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Process.hpp; sourceTree = "<group>"; };
 		B3E5ECA720A70DD800895718 /* os */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = os; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E5ECAA20A70DD800895718 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B3E5ECB420A725D900895718 /* projectRunner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = projectRunner.cpp; sourceTree = "<group>"; };
@@ -78,7 +87,15 @@
 		B3E5ECA920A70DD800895718 /* os */ = {
 			isa = PBXGroup;
 			children = (
+				B36553BC20B6209B00F21919 /* project_supplementary.pdf */,
+				B36553C020B6209B00F21919 /* sample_input.json */,
+				B36553BD20B6209B00F21919 /* test1_D10.json */,
+				B36553BB20B6209A00F21919 /* test1_D26.json */,
+				B36553BE20B6209B00F21919 /* test2_D11.json */,
+				B36553BF20B6209B00F21919 /* test2_D20.json */,
 				B3F7185B20A7721300662025 /* project.pdf */,
+				B36553C120B6260A00F21919 /* Process.cpp */,
+				B36553C220B6260A00F21919 /* Process.hpp */,
 				B3FB222020B3826F00DD8F8D /* Node.cpp */,
 				B3FB222120B3826F00DD8F8D /* Node.hpp */,
 				B3FB222320B383E800DD8F8D /* HoldQ1.cpp */,
@@ -158,6 +175,7 @@
 				B3E5ECAB20A70DD800895718 /* main.cpp in Sources */,
 				B3E5ECB620A725D900895718 /* projectRunner.cpp in Sources */,
 				B3F7185E20A778FF00662025 /* SystemConfig.cpp in Sources */,
+				B36553C320B6260A00F21919 /* Process.cpp in Sources */,
 				B3FB222820B383F500DD8F8D /* HoldQ2.cpp in Sources */,
 				B3F7186120A77ABE00662025 /* Job.cpp in Sources */,
 				B3FB222520B383E800DD8F8D /* HoldQ1.cpp in Sources */,

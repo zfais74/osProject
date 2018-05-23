@@ -60,3 +60,11 @@ void SystemConfig::freeMem(int memFreed){
 string SystemConfig::toString(){
     return to_string(this->arrivalTime) + " " + to_string(this->availableDevices) + " " + to_string(this->availableMem);
 }
+
+int SystemConfig::getAvailableMem(){
+    return availableMem;
+}
+
+int SystemConfig::getAvailableDevices(){
+    return availableDevices;
+}

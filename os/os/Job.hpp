@@ -27,5 +27,7 @@ public:
     int getPriority();
     int getId();
     int getUnitsOfTime();
+    int getUnitsOfMem();
+    int getMaxDevices();
 };
 #endif /* Job_hpp */

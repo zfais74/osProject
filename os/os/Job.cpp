@@ -33,3 +33,11 @@ int Job::getId(){
 int Job::getUnitsOfTime(){
     return unitsOfTime;
 }
+
+int Job::getUnitsOfMem(){
+    return unitsOfMem;
+}
+
+int Job::getMaxDevices(){
+    return maxDevices;
+}
