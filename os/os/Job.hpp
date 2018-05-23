@@ -26,5 +26,6 @@ public:
     string toString();
     int getPriority();
     int getId();
+    int getUnitsOfTime();
 };
 #endif /* Job_hpp */

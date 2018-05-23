@@ -29,3 +29,7 @@ int Job::getPriority(){
 int Job::getId(){
     return id;
 }
+
+int Job::getUnitsOfTime(){
+    return unitsOfTime;
+}

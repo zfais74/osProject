@@ -10,6 +10,7 @@
 #include "SystemConfig.hpp"
 #include "Job.hpp"
 #include "HoldQ2.hpp"
+#include "HoldQ1.hpp"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -28,6 +29,7 @@ string ProjectRunner::readFile(string fileName){
     ifstream myFile(fileName.c_str());
     //myFile.open("test.txt");
     HoldQ2 q2 = HoldQ2();
+    HoldQ1 q1 = HoldQ1();
     string line;
     vector<Job*>jobs;
     if(myFile.is_open()){
@@ -79,6 +81,10 @@ string ProjectRunner::readFile(string fileName){
                     if(job->getPriority() == 2){
                         q2.insert(job);
                     }
+                    if(job->getPriority() == 1) {
+                        cout<<"push to q1"<<endl;
+                        q1.insertJob(job);
+                    }
                     jobs.push_back(job);
                     break;
                 }
@@ -115,6 +121,8 @@ string ProjectRunner::readFile(string fileName){
         cout<<system.toString()<<endl;
         //cout<<jobs[2]->toString()<<endl;
         q2.print();
+        cout<<"bllaha"<<endl;
+        q1.printJobs();
         return "done";
     } else {
         return "error reading file";

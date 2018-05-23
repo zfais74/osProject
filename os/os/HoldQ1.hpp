@@ -21,7 +21,8 @@ public:
     ~HoldQ1();
     void insertJob(Job *job);
     void addFirstJob(Job *job);
-    bool popJob();
+    Job* popJob();
+    void printJobs();
     
 };
 
