@@ -11,6 +11,10 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
+#include "Process.hpp"
+#include "HoldQ1.hpp"
+#include "HoldQ2.hpp"
 using namespace std;
 
 class SystemConfig{
@@ -20,10 +24,17 @@ private:
     int availableDevices;
     int memSize;
     int availableMem;
-    int time;
+    int quantum;
+    int currentTime;
+    int quantumCounter;
 public:
+    HoldQ1 *hq1;
+    HoldQ2 *hq2;
+    vector<Process*>rq;
+    vector<Job*>cq;
+    Process *running;
     SystemConfig();
-    SystemConfig(int arrivalTime, int memSize, int devices, int time);
+    SystemConfig(int arrivalTime, int memSize, int devices, int quantum);
     int getArrivalTime();
     int getMemSize();
     int getDevices();
@@ -35,6 +46,10 @@ public:
     string toString();
     int getAvailableMem();
     int getAvailableDevices();
+    void increseTime();
+    int getQuantum();
+    bool runProcess(Process *process);
+    void updateSystem(int updatedTime);
 };
 
 #endif /* SystemConfig_hpp */

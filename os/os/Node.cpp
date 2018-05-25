@@ -17,7 +17,7 @@ Node::Node(Job *job){
 
 Node::~Node(){
     if(this->previous !=NULL || this->next !=NULL){
-        cout<< "Warning, there may be a data leak after deleting this node"<<endl;
+        //cout<< "Warning, there may be a data leak after deleting this node"<<endl;
     }
 }
 

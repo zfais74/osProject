@@ -29,5 +29,7 @@ public:
     int getUnitsOfTime();
     int getUnitsOfMem();
     int getMaxDevices();
+    int getArrivalTime();
+    void decUnitsOfTime();
 };
 #endif /* Job_hpp */

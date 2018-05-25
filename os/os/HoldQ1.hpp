@@ -23,6 +23,7 @@ public:
     void addFirstJob(Job *job);
     Job* popJob();
     void printJobs();
+    int getSize();
     
 };
 

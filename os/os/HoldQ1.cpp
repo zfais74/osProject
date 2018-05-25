@@ -67,9 +67,29 @@ void HoldQ1::addFirstJob(Job *job){
 void HoldQ1::printJobs(){
     Node *traverse = head;
     while(traverse !=NULL){
-        cout<<"job q1"<<endl;
-        cout<<traverse->getJob()->getId()<<endl;
-        cout<<traverse->getJob()->getUnitsOfTime()<<endl;
+        cout<<traverse->getJob()->getId();
+        cout<<", ";
         traverse = traverse->next;
+    }
+    cout<<endl;
+}
+
+int HoldQ1::getSize(){
+    return size;
+}
+
+Job* HoldQ1::popJob(){
+    //if the queue is 0 or less return null
+    if(size <= 1){
+        return head->getJob();
+    } else {
+        //get rid of the first job and return it's pointer
+        Job *job = head->job;
+        size--;
+        Node *temp = head;
+        head = temp->next;
+        temp->next = NULL;
+        tail = head->next;
+        return job;
     }
 }

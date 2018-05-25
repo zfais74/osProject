@@ -10,11 +10,27 @@
 #define Process_hpp
 
 #include <stdio.h>
+#include "Job.hpp"
+#include <string>
+using namespace std;
 class Process{
 private:
-    int pid;
+    int jobId;
     int arrivalTime;
     int cpuBurst;
+    int timeRemaining;
+    int completionTime;
+public:
+    Job *job;
+    Process(Job *job, int arrivalTime);
+    ~Process();
+    int getArrivalTime();
+    int getBurst();
+    int getTimeRemaining();
+    int getCompletionTime();
+    int getJobId();
+    void decrementTimeRemaining(int quantum);
+    string toString();
     
 };
 

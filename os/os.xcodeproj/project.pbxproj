@@ -43,7 +43,6 @@
 		B3E5ECB420A725D900895718 /* projectRunner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = projectRunner.cpp; sourceTree = "<group>"; };
 		B3E5ECB520A725D900895718 /* projectRunner.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = projectRunner.hpp; sourceTree = "<group>"; };
 		B3E5ECB720A72EB200895718 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
-		B3F7185A20A76E7200662025 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		B3F7185B20A7721300662025 /* project.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = project.pdf; sourceTree = "<group>"; };
 		B3F7185C20A778FF00662025 /* SystemConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SystemConfig.cpp; sourceTree = "<group>"; };
 		B3F7185D20A778FF00662025 /* SystemConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SystemConfig.hpp; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 				B3FB222720B383F500DD8F8D /* HoldQ2.hpp */,
 				B3E5ECAA20A70DD800895718 /* main.cpp */,
 				B3E5ECB720A72EB200895718 /* input.txt */,
-				B3F7185A20A76E7200662025 /* test.txt */,
 				B3E5ECB420A725D900895718 /* projectRunner.cpp */,
 				B3E5ECB520A725D900895718 /* projectRunner.hpp */,
 				B3F7185C20A778FF00662025 /* SystemConfig.cpp */,

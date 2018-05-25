@@ -21,5 +21,6 @@ public:
     bool insert(Job *job);
     Job* popJob();
     void print();
+    int getSize();
 };
 #endif /* HoldQ2_hpp */

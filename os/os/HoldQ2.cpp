@@ -35,7 +35,6 @@ bool HoldQ2::insert(Job *job){
         size++;
         head = newNode;
         tail = newNode;
-        cout<<"hi" + newNode->job->toString()<<endl;
         return true;
     }
     
@@ -58,7 +57,7 @@ bool HoldQ2::insert(Job *job){
 
 Job* HoldQ2::popJob(){
     //if the queue is 0 or less return null
-    if(size <= 0){
+    if(size <= 1){
         return head->getJob();
     } else {
         //get rid of the first job and return it's pointer
@@ -76,9 +75,12 @@ Job* HoldQ2::popJob(){
 void HoldQ2::print(){
     Node *traverse = head;
     while(traverse != NULL){
-        cout<<"job pr: "<<endl;
-        cout<<traverse->getJobPriority()<<endl;
-        cout<<traverse->getJob()->getId()<<endl;
+        cout<<traverse->getJob()->getId();
         traverse = traverse->next;
     }
+    cout<<endl;
+}
+
+int HoldQ2::getSize(){
+    return size;
 }
